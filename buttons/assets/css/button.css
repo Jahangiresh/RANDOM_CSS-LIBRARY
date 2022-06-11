@@ -1,0 +1,81 @@
+.button-1 {
+  width: 200px;
+  height: 70px;
+  border: 0;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  position: absolute;
+  z-index: 5;
+  background: transparent;
+}
+
+.button-1 span {
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 13px;
+  display: inline-block;
+  position: relative;
+  z-index: 3;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-decoration: none;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button-1 .button-hover-box {
+  background: #6a65ff;
+  background: -webkit-gradient(linear, left bottom, left top, from(#ca2dff), color-stop(55%, #8e96f8), to(#52fff1));
+  background: linear-gradient(0deg, #ca2dff 0%, #8e96f8 55%, #52fff1 100%);
+  width: 200px;
+  height: 70px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+.button-1:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  border: 1px solid #dd79ff;
+}
+
+.button-1:hover span {
+  color: #ca2dff;
+}
+
+.button-1:hover .button-hover-box {
+  -webkit-animation-name: button;
+          animation-name: button;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes button {
+  90% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes button {
+  90% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=button.css.map */
