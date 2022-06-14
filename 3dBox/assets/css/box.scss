@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+height: 100vh;
+background: rgb(183, 183, 255);
+.container{
+    height: 60vh;
+    width: 30vw;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%,-50%);
+    perspective: 1000px;
+  
+   
+    .box{
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        top: 100px;
+        left: 100px;
+       
+        transform: rotateY(340deg);
+        transform-style: preserve-3d;
+        // transition: 500ms ease-in-out;
+      
+        
+        
+   
+ 
+        .card{
+            height: 250px;
+            width: 250px;
+            text-align: center;
+            padding: 100px 0;
+            color: white;
+            background: black;
+            border: 2px solid white;
+            font-size: 32px;
+            box-sizing: border-box;
+            position: absolute;
+            // box-shadow: 0 0 35px 5px green;
+           
+                 img{
+                     
+                    transform: rotate(180deg);
+                  border: 2px solid white;
+                  border-bottom: none;
+                  border-top: none;
+                    width: 100%;
+                 margin-top: 40px;
+                 }
+            }
+            #front{
+                transform: translateZ(-125px);
+             }
+            #back{
+                transform: translateZ(125px);
+             }
+            #left{
+                right: 125px;
+                transform: rotateY(-90deg);
+            }
+            #right{
+                left: 125px;
+                transform: rotateY(90deg);
+            }
+            #top{
+                bottom: 125px;
+                transform: rotateX(90deg);
+            }
+            #bottom{
+                top: 125px;
+                transform: rotateX(-90deg);
+            }
+        
+         }
+         .box:hover{
+            animation-name: rotation;
+         animation-play-state: running;
+         animation-duration: 3500ms;
+         animation-iteration-count:infinite;
+         }
+         @keyframes rotation {
+            0%{
+                transform: rotate(0deg);
+                
+            }
+            100%{
+               transform: rotateXY(340deg);
+            
+           }
+        }
+    }
+}

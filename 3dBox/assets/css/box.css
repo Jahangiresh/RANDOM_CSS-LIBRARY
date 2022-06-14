@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #b7b7ff;
+}
+
+body .container {
+  height: 60vh;
+  width: 30vw;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+body .container .box {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  -webkit-transform: rotateY(340deg);
+          transform: rotateY(340deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+body .container .box .card {
+  height: 250px;
+  width: 250px;
+  text-align: center;
+  padding: 100px 0;
+  color: white;
+  background: black;
+  border: 2px solid white;
+  font-size: 32px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: absolute;
+}
+
+body .container .box .card img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  border: 2px solid white;
+  border-bottom: none;
+  border-top: none;
+  width: 100%;
+  margin-top: 40px;
+}
+
+body .container .box #front {
+  -webkit-transform: translateZ(-125px);
+          transform: translateZ(-125px);
+}
+
+body .container .box #back {
+  -webkit-transform: translateZ(125px);
+          transform: translateZ(125px);
+}
+
+body .container .box #left {
+  right: 125px;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+
+body .container .box #right {
+  left: 125px;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+
+body .container .box #top {
+  bottom: 125px;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+body .container .box #bottom {
+  top: 125px;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+
+body .container .box:hover {
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-duration: 3500ms;
+          animation-duration: 3500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotateXY(340deg);
+            transform: rotateXY(340deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotateXY(340deg);
+            transform: rotateXY(340deg);
+  }
+}
+/*# sourceMappingURL=box.css.map */
